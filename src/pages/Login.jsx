@@ -49,7 +49,7 @@ const Login = () => {
                         <div className='text-start'>
                             <p>
                                 Don't have an account?&nbsp;  
-                                <a className="link link-hover text-white/80 hover:underline font-[500]">
+                                <a href='/register' className="link link-hover text-white/80 hover:underline font-[500]">
                                 Register here
                                 </a>
                             </p>

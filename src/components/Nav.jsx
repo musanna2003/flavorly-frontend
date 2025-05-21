@@ -1,12 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Nav = () => {
 
     const navItem = <>
-        <li><a>Home</a></li>
-        <li><a>All Recipes</a></li>
-        <li><a>Add Recipe</a></li>
-        <li><a>My Recipes</a></li>
+        
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><a href="#allrecipes">All Recipes</a></li>
+        <li><NavLink to="/addrecipe">Add Recipe</NavLink></li>
+        <li><NavLink to="/myrecipes">My Recipes</NavLink></li>
     </>
 
     return (
@@ -34,7 +36,7 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20">
+                <a href='/login' className="btn bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20">
                     Login
                 </a>
             </div>
