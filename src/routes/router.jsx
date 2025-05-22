@@ -33,7 +33,8 @@ const router = createBrowserRouter([
                 element : <Register></Register>
             },
             {
-                path : "/editrecipe",
+                path : "/editrecipe/:id",
+                loader : ({params}) => fetch(`http://localhost:3000/recipes/${params.id}`),
                 element : <EditRec></EditRec>
             },
             {

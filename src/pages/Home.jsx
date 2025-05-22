@@ -18,7 +18,7 @@ const Home = () => {
             </div> */}
             {/* all recipe */}
             <div id='allrecipes' className=" w-[90vw] mx-auto ">
-                <h1 className=' text-black text-3xl font-[500]'>All Recipes</h1>
+                <h1 className=' my-10 text-5xl font-bold text-black/70'>All Recipes</h1>
                 <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {
                         posts.map((post) => (

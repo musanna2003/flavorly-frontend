@@ -57,10 +57,10 @@ const AddRec = () => {
             }}
             >
             <div className="hero-overlay"></div>
-            <div className="hero-content text-neutral-content text-center">
-                <div className="card mx-auto w-full max-w-lg md:max-w-2xl bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 rounded-xl">
+            <div className="hero-content w-full text-neutral-content text-center">
+                <div className="card mx-auto w-full max-w-2xl shrink-0 bg-white/10 backdrop-blur-md shadow-2xl border border-white/20 rounded-xl">
                     <div className="card-body">
-                        <h1 className="text-5xl font-bold text-black/90">Share Your Recipe</h1>
+                        <h1 className=" my-5 text-5xl font-bold text-white/90">Share Your Recipe</h1>
                         <form onSubmit={handelPost} className="space-y-2 text-left flex flex-col ">
                            
                             <label className="label text-white">Photo URL</label>

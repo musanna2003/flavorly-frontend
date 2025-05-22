@@ -47,8 +47,8 @@ const MyDetail = () => {
         });
     }
 
-    const handelEdit = () =>{
-        navigate(`/editrecipe`);
+    const handelEdit = (id) =>{
+        navigate(`/editrecipe/${id}`);
     }
 
 
@@ -70,7 +70,7 @@ const MyDetail = () => {
                 <p><strong>Ingredients:</strong> {post.instructions}</p>
                 <div className="border-t-1 w-full border-black/40"></div>
                 <div className="card-actions justify-end">
-                    <p onClick={handelEdit} className='btn btn-ghost' ><MdEdit size={18} /></p>
+                    <p onClick={()=>handelEdit(post._id)} className='btn btn-ghost' ><MdEdit size={18} /></p>
                     <p onClick={()=>handelDelete(post._id)} className='btn btn-ghost' ><MdDeleteOutline size={18} /></p>
                 </div>
             </div>
