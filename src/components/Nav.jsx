@@ -6,13 +6,13 @@ const Nav = () => {
     const navItem = <>
         
         <li><NavLink to="/">Home</NavLink></li>
-        <li><a href="#allrecipes">All Recipes</a></li>
+        <li><a href="/#allrecipes">All Recipes</a></li>
         <li><NavLink to="/addrecipe">Add Recipe</NavLink></li>
         <li><NavLink to="/myrecipes">My Recipes</NavLink></li>
     </>
 
     return (
-        <div className="navbar bg-[#c70609] shadow-sm">
+        <div className="navbar bg-[#ff0005] shadow-sm">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

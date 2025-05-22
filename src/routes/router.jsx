@@ -7,6 +7,9 @@ import Register from '../pages/Register';
 import AddRec from '../pages/AddRec';
 import MyRev from '../pages/MyRec';
 import MyRec from '../pages/MyRec';
+import Details from '../pages/Details';
+import MyDetail from '../pages/MyDetail';
+import EditRec from '../pages/EditRec';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
             {
                 index : true,
                 path : "/",
-                // loader : () => fetch("/eventData.json"),
+                loader : () => fetch("http://localhost:3000/recipes"),
                 Component : Home,
 
             },
@@ -30,12 +33,27 @@ const router = createBrowserRouter([
                 element : <Register></Register>
             },
             {
+                path : "/editrecipe",
+                element : <EditRec></EditRec>
+            },
+            {
                 path : "/addrecipe",
                 element : <AddRec></AddRec>
             },
             {
                 path : "/myrecipes",
+                loader : () => fetch("http://localhost:3000/recipes"),
                 element : <MyRec></MyRec>
+            },
+            {
+                path : "/details/:id",
+                loader : ({params}) => fetch(`http://localhost:3000/recipes/${params.id}`),
+                element : <Details></Details>
+            },
+            {
+                path : "/mydetail/:id",
+                loader : ({params}) => fetch(`http://localhost:3000/recipes/${params.id}`),
+                element : <MyDetail></MyDetail>
             }
 
         ]

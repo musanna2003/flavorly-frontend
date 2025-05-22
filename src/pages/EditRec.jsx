@@ -4,7 +4,7 @@ import { MdOutlineAddPhotoAlternate } from 'react-icons/md';
 import { toast } from 'react-toastify';
 
 
-const AddRec = () => {
+const EditRec = () => {
 
     const handelPost = (e) => {
         e.preventDefault();
@@ -31,7 +31,7 @@ const AddRec = () => {
             .then(data => {
                 if(data.insertedId){
                     console.log("done")
-                    toast.success('Upload successful!', {
+                    toast.success('Update successful!', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -85,7 +85,7 @@ const AddRec = () => {
                                 name='title'
                             />
                             <label className="label text-white">Cuisine Type</label>
-                            <select name='Cuisine_Type' className="select select-error w-full bg-white/20 text-text-white/60 placeholder-white/60">
+                            <select name='Cuisine_Type' className="select select-error w-full bg-white/20 text-white/60 placeholder-white/60">
                                 <option disabled selected >Select cuisine</option>
                                 <option>Italian</option>
                                 <option>Mexican</option>
@@ -156,4 +156,4 @@ const AddRec = () => {
     );
 };
 
-export default AddRec;
+export default EditRec;
