@@ -49,9 +49,9 @@ const router = createBrowserRouter([
                 element : <PrivetRoute><AddRec></AddRec></PrivetRoute>
             },
             {
-                path : "/myrecipes",
-                loader : () => fetch("http://localhost:3000/recipes"),
-                element : <PrivetRoute><MyRec></MyRec></PrivetRoute>
+                path: "/myrecipes/email/:email",
+                loader: ({ params }) => fetch(`http://localhost:3000/recipes/email/${params.email}`),
+                element: <PrivetRoute><MyRec /></PrivetRoute>
             },
             {
                 path : "/details/:id",

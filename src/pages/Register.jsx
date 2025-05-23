@@ -87,24 +87,28 @@ const Register = () => {
                                 type="text"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Name"
+                                name='name'
                             />
                             <label className="label text-white">Photo URL</label>
                             <input
                                 type="text"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Photo URL"
+                                name='photo'
                             />
                              <label className="label text-white">Email</label>
                             <input
                                 type="email"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Email"
+                                name='email'
                             />
                             <label className="label text-white">Password</label>
                             <input
                                 type="password"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Password"
+                                name='password'
                             />
                             <button className="btn bg-[#ff0005] w-full border-0 mt-4">Register</button>
                         </form>

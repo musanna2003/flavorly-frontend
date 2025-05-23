@@ -21,7 +21,10 @@ const Nav = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><a href="/#allrecipes">All Recipes</a></li>
         <li><NavLink to="/addrecipe">Add Recipe</NavLink></li>
-        <li><NavLink to="/myrecipes">My Recipes</NavLink></li>
+        <li>
+            <NavLink to={`/myrecipes/email/${user?.email}`}>My Recipes</NavLink>
+        </li>
+
     </>
 
     return (
@@ -55,9 +58,19 @@ const Nav = () => {
                             Login
                         </a>
                         :
-                        <a onClick={handelLogout} className="btn btn-ghost hover:bg-black/5 hover:border-0">
-                            Logout
-                        </a>
+                        <>
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="">
+                                    
+                                        <img className=" w-10 rounded-full" src={ user.photoURL || "https://i.ibb.co.com/NdFHxWHB/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg"} />
+                                   
+                                </div>
+                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                    <li><a href="">{user.displayName || "User"}</a></li>
+                                    <li><a onClick={handelLogout} >Logout</a></li>
+                                </ul>
+                            </div>
+                        </>
                 }
             </div>
         </div>

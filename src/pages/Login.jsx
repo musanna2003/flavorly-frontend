@@ -106,12 +106,14 @@ const Login = () => {
                                 type="email"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Email"
+                                name='email'
                             />
                             <label className="label text-white">Password</label>
                             <input
                                 type="password"
                                 className="input input-bordered w-full bg-white/20 text-white placeholder-white/60"
                                 placeholder="Password"
+                                name='password'
                             />
                             <div><NavLink to="forgotPassword"><p className="link link-hover">Forgot password?</p></NavLink></div>
                             <button className="btn bg-[#ff0005] w-full border-0 mt-4">Login</button>

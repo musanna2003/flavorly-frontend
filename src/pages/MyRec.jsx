@@ -4,6 +4,11 @@ import TopRec from '../components/TopRec';
 
 const MyRec = () => {
     const posts = useLoaderData();
+    {
+        if (!Array.isArray(posts) || posts.length === 0) {
+            return <div className="text-black">no post available</div>
+        }
+    }
     return (
         <div className='className=" w-[90vw] mx-auto p-5 md:py-16'>
             <div className="w-full text-center"><h1 className=' mb-10 text-5xl font-bold text-black/70'>My Recipes</h1></div>

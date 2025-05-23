@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import bg from '../assets/chinese-food-8119421_1920.jpg'
 import { MdOutlineAddPhotoAlternate } from 'react-icons/md';
 import { toast } from 'react-toastify';
+import { MyContext } from '../../public/MyContext';
 
 
 const AddRec = () => {
+
+    const {user} = useContext(MyContext);
 
     const handelPost = (e) => {
         e.preventDefault();
@@ -16,6 +19,12 @@ const AddRec = () => {
         // Get all checked categories (checkboxes with same name)
         const categories = formData.getAll('categories');
         postData.categories = categories;
+
+        // Add the user email from context
+        postData.email = user?.email;
+        postData.author = user?.displayName
+        postData.likes = 0;
+        postData.likedBy = [];
 
         console.log(postData); // categories will now be an array
 
