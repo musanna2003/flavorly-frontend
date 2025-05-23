@@ -1,7 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { useContext } from 'react';
+import { NavLink, useNavigate } from 'react-router';
+import { MyContext } from '../../public/MyContext';
 
 const Nav = () => {
+    const {user,signOutUser} = useContext(MyContext);
+    const navigate = useNavigate();
+    const handelLogout = () =>{
+        signOutUser().then(() => {
+            // Sign-out successful.
+           
+            navigate("login")
+          }).catch((error) => {
+            // An error happened.
+            console.log(error);
+          });;
+    }
 
     const navItem = <>
         
@@ -36,9 +49,16 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='/login' className="btn bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20">
-                    Login
-                </a>
+                {
+                    !user?
+                        <a href='/login' className="btn btn-ghost hover:bg-black/5 hover:border-0">
+                            Login
+                        </a>
+                        :
+                        <a onClick={handelLogout} className="btn btn-ghost hover:bg-black/5 hover:border-0">
+                            Logout
+                        </a>
+                }
             </div>
         </div>
     );

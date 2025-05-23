@@ -10,11 +10,14 @@ import MyRec from '../pages/MyRec';
 import Details from '../pages/Details';
 import MyDetail from '../pages/MyDetail';
 import EditRec from '../pages/EditRec';
+import ForgotPassword from '../pages/ForgotPassword';
+import PrivetRoute from './PrivetRoute';
+import ErrorPage from '../pages/ErrorPage';
 
 const router = createBrowserRouter([
     {
         path: "/",
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         Component: Root,
         children : [
             {
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
                 element : <Login></Login>
             },
             {
+                path : "login/forgotPassword",
+                element : <ForgotPassword></ForgotPassword>
+            },
+            {
                 path : "/register",
                 element : <Register></Register>
             },
@@ -39,22 +46,22 @@ const router = createBrowserRouter([
             },
             {
                 path : "/addrecipe",
-                element : <AddRec></AddRec>
+                element : <PrivetRoute><AddRec></AddRec></PrivetRoute>
             },
             {
                 path : "/myrecipes",
                 loader : () => fetch("http://localhost:3000/recipes"),
-                element : <MyRec></MyRec>
+                element : <PrivetRoute><MyRec></MyRec></PrivetRoute>
             },
             {
                 path : "/details/:id",
                 loader : ({params}) => fetch(`http://localhost:3000/recipes/${params.id}`),
-                element : <Details></Details>
+                element : <PrivetRoute><Details></Details></PrivetRoute>
             },
             {
                 path : "/mydetail/:id",
                 loader : ({params}) => fetch(`http://localhost:3000/recipes/${params.id}`),
-                element : <MyDetail></MyDetail>
+                element : <PrivetRoute><MyDetail></MyDetail></PrivetRoute>
             }
 
         ]
