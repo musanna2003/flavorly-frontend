@@ -4,6 +4,8 @@ import TopRec from '../components/TopRec';
 import Slider from '../components/Slider';
 import Login from './Login';
 import { useLoaderData } from 'react-router';
+import Qna from '../components/Qna';
+import Sponce from '../components/Sponce';
 
 const Home = () => {
 
@@ -31,6 +33,8 @@ const Home = () => {
                     <button className='btn bg-[#ff0005] border-0 rounded-none'>View more</button>
                 </div>
             </div> */}
+            <Sponce></Sponce>
+            <Qna></Qna>
         </div>
     );
 };

@@ -9,7 +9,7 @@ import { MyProvider } from '../public/MyContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <MyProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}  />
     </MyProvider>
   </StrictMode>,
 )

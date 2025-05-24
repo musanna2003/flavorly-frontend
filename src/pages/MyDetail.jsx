@@ -20,7 +20,7 @@ const MyDetail = () => {
             .then((willDelete) => {
             if (willDelete) {
                 
-                fetch(`http://localhost:3000/recipes/${id}`,{
+                fetch(`https://phassignment102.vercel.app/recipes/${id}`,{
                     method : 'DELETE'
                 })
                     .then(res => res.json())

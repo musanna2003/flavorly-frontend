@@ -36,7 +36,7 @@ const Details = () => {
                     });
         }
 
-        fetch(`http://localhost:3000/recipes/like/${id}`, {
+        fetch(`https://phassignment102.vercel.app/recipes/like/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: userEmail }),

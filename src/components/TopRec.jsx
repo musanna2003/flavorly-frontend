@@ -12,11 +12,14 @@ const TopRec = ({post}) => {
 
     
     const handleDetails = (_id,email) => {
-        if (user.email === email){
-            navigate(`/mydetail/${_id}`);
+        // if (!user){
+        //     return navigate('/login');
+        // }
+        if (user?.email === email){
+            return navigate(`/mydetail/${_id}`);
         }
         else{
-            navigate(`/details/${_id}`);
+            return navigate(`/details/${_id}`);
         }
         
     };

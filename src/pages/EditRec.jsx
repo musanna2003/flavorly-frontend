@@ -24,7 +24,7 @@ const EditRec = () => {
         updateData.categories = categories;
 
         // Send PUT request
-        fetch(`http://localhost:3000/recipes/${post._id}`, {
+        fetch(`https://phassignment102.vercel.app/recipes/${post._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

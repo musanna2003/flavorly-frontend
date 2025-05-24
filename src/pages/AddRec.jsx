@@ -29,7 +29,7 @@ const AddRec = () => {
         console.log(postData); // categories will now be an array
 
         //send to db
-        fetch('http://localhost:3000/recipes',{
+        fetch('https://phassignment102.vercel.app/recipes',{
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'

@@ -42,7 +42,7 @@ const Nav = () => {
                     }
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Flavorly</a>
+                <a href='/' className="btn btn-ghost text-xl">Flavorly</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
