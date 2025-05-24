@@ -13,6 +13,7 @@ import EditRec from '../pages/EditRec';
 import ForgotPassword from '../pages/ForgotPassword';
 import PrivetRoute from './PrivetRoute';
 import ErrorPage from '../pages/ErrorPage';
+import AllPost from '../pages/AllPost';
 
 const router = createBrowserRouter([
     {
@@ -23,8 +24,14 @@ const router = createBrowserRouter([
             {
                 index : true,
                 path : "/",
-                loader : () => fetch("http://localhost:3000/recipes"),
+                loader : () => fetch("http://localhost:3000/recipes/sort"),
                 Component : Home,
+
+            },
+            {
+                path : "/allrecipes",
+                loader : () => fetch("http://localhost:3000/recipes"),
+                element : <AllPost></AllPost>
 
             },
             {

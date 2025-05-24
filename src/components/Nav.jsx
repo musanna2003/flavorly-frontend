@@ -19,7 +19,7 @@ const Nav = () => {
     const navItem = <>
         
         <li><NavLink to="/">Home</NavLink></li>
-        <li><a href="/#allrecipes">All Recipes</a></li>
+        <li><NavLink to="/allrecipes">All Recipes</NavLink></li>
         <li><NavLink to="/addrecipe">Add Recipe</NavLink></li>
         <li>
             <NavLink to={`/myrecipes/email/${user?.email}`}>My Recipes</NavLink>
@@ -42,7 +42,7 @@ const Nav = () => {
                     }
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">Flavorly</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

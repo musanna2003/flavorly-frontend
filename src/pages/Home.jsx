@@ -12,12 +12,12 @@ const Home = () => {
         <div className=' bg-white'>
             <Hero></Hero>
             {/* popular recipi */}
-            {/* <div className=" w-[90vw] mx-auto ">
-                <h1 className=' text-black text-3xl font-[500]'>Top Recipes</h1>
-                <Slider></Slider>
-            </div> */}
-            {/* all recipe */}
-            <div id='allrecipes' className=" w-[90vw] mx-auto ">
+            <div className=" w-[90vw] mx-auto ">
+                <h1 className=' my-10 text-5xl font-bold text-black/70'>Top Recipes</h1>
+                <Slider posts={posts} ></Slider>
+            </div>
+            {/* all recipe */} 
+            {/* <div id='allrecipes' className=" w-[90vw] mx-auto ">
                 <h1 className=' my-10 text-5xl font-bold text-black/70'>All Recipes</h1>
                 <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {
@@ -30,7 +30,7 @@ const Home = () => {
                 <div className=" flex justify-center">
                     <button className='btn bg-[#ff0005] border-0 rounded-none'>View more</button>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

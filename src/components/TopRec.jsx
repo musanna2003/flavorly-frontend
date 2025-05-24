@@ -36,9 +36,12 @@ const TopRec = ({post}) => {
                     <p className='flex items-center gap-1.5'><FaRegClock />{post.time}Minutes</p>
                     <p className='flex items-center gap-1.5'><FaUtensils />{post.Cuisine_Type}</p>
                 </div>
-                <h2 className="card-title">{post.title}</h2>
-                
-                <p><strong>Ingredients:</strong> {post.ingredients}</p>
+                <h2 className="card-title">{post.title.slice(0, 16) + "..."}</h2>
+                <div className=" w-fit flex gap-1">
+                    {
+                        post.categories.slice(0,2).map((cat,index) => <p key={index} className=' w-fit text-xs text-white bg-[#ff0005]/80 py-1 px-2 rounded'>{cat}</p>)
+                    }
+                </div>
                 <div className="card-actions justify-end">
                     <button className="flex py-3 items-center gap-2 text-black/50" onClick={()=>handleDetails(post._id,post.email)}>View Recipe <FaArrowRight className="text-red-500"  /></button>
                 </div>

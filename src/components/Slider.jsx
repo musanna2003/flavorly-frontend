@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import TopRec from './TopRec';
 
-export default function Slider() {
+export default function Slider({posts}) {
   return (
     <>
       <Swiper
@@ -36,13 +36,11 @@ export default function Slider() {
         modules={[Pagination]}
         className=" md:w-full w-[80vw] h-[100vw] md:h-[63vw] lg:h-[38vw] sm:p-1"
       >
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        <SwiperSlide><TopRec></TopRec></SwiperSlide>
-        
+        {
+            posts.slice(0, 5).map((post) => (
+                <SwiperSlide><TopRec key={post._id} post={post} /></SwiperSlide>
+            ))
+        }
       </Swiper>
     </>
   );
