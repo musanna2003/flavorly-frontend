@@ -60,7 +60,7 @@ const Nav = () => {
                         :
                         <>
                             <div className="dropdown dropdown-end">
-                                <div tabIndex={0} role="button" className="">
+                                <div tabIndex={0} role="button" className="mx-[1vw]">
                                     
                                         <img className=" w-10 rounded-full" src={ user.photoURL || "https://i.ibb.co.com/NdFHxWHB/307ce493-b254-4b2d-8ba4-d12c080d6651.jpg"} />
                                    

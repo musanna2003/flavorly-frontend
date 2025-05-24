@@ -13,6 +13,7 @@ const EditRec = () => {
 
     const handelUpdate = (e) => {
         e.preventDefault();
+        alert("sidn")
         const formData = new FormData(e.target);
 
         // Convert to object
@@ -24,7 +25,7 @@ const EditRec = () => {
 
         // Send PUT request
         fetch(`http://localhost:3000/recipes/${post._id}`, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
@@ -43,7 +44,7 @@ const EditRec = () => {
                         progress: undefined,
                         theme: "colored",
                     });
-                    navigate('/myrecipes')
+                    navigate(`/myrecipes/email/${post.email}`)
                 } else {
                     toast.info('No changes made.');
                 }
@@ -102,7 +103,7 @@ const EditRec = () => {
                                 className="select select-error w-full bg-white/20 text-white/60 placeholder-white/60"
                                 defaultValue={post.Cuisine_Type}
                             >
-                                <option disabled selected >Select cuisine</option>
+                                <option value="" disabled>Select cuisine</option>
                                 <option>Italian</option>
                                 <option>Mexican</option>
                                 <option>Indian</option>
