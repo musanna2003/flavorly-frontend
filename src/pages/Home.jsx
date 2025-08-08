@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </div> */}
             <Sponce></Sponce>
-            <Qna></Qna>
+            {/* <Qna></Qna> */}
         </div>
     );
 };
