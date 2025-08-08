@@ -1,12 +1,36 @@
-# React + Vite
+# Flavorly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📄 Description
+Flavorly is a social recipe sharing platform where users can discover, post, and interact with food recipes from around the world.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [https://flavorly.vercel.app/](https://flavorly.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Screenshot
+![Flavorly Screenshot](assets/flavorly-screenshot.png)
 
-## Expanding the ESLint configuration
+## ⚙️ Technologies Used
+React.js, Node.js, Express.js, MongoDB, Tailwind CSS, JWT Auth
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Core Features
+- User login and registration
+- Post and edit recipes with images
+- Like and comment on others' recipes
+- Filter recipes by ingredients or category
+- Responsive and engaging UI
+
+## 📦 Dependencies
+- react-hook-form
+- jsonwebtoken
+- multer
+- mongoose
+- express-validator
+
+## 🛠️ How to Run Locally
+
+1. Clone the repository
+2. Run `npm install` to install dependencies
+2. Create a `.env` file with necessary credentials
+2. Start server with `npm run server` and client with `npm start`
+
+---
+🔗 **Live Project:** [{flavorly['live_link']}]({flavorly['live_link']})
